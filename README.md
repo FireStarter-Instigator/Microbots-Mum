@@ -1,4 +1,6 @@
-Follow the youtube video on my channel on how to setup your runelite maven project (similar as before just uses Microbot's mum and not Microbot).
+TO USE THIS PROJECT: 
+1. GO HERE: https://download-directory.github.io/
+2. Then paste in "MICROBOTS-MUM" and what this does ihe same as doing git clone. So then you just click open project instead of clone repository.  
 
 This project comes with some plugins:
 1. An autolooter
@@ -6,13 +8,15 @@ This project comes with some plugins:
 3. BoL (Highly restricted QoL)
 4. Breakhandler before it got corrupted
 5. Discord (I just leave this in out of fear my integrated webhooks wont trigger)
-6. Highly educative ExampleScript and ExamplePlugin - if you need the "basic" one just get it from another repository on my profile I made for it.
+6. Highly educative ExampleScript and ExamplePlugin - if you need the "basic" one just get it from another repository link from my prfile at the bottom of the README.md
 7. Player Monitor (with LiteMode)
 8. Rs2walker (ShortestPath) - #tip ShortestPathPlugin.walkViaPanel() is a great method if you ever get stuck or script walkTo commands don't operate reliably. 
 
-Please PR to improve and add plugins for developer role. Discord link available on youtube channel.
+Please PR to improve and add plugins for developer role. Discord link available on youtube channel and i'll put a video up soon on how to get Microbot's Mum up and running (the old gal). 
 
-This is the full setup (will go through it on YouTube video for beginners):
+----------------------------------------- BELOW HERE IS ONLY FOR THE ABSOLUTE GIGACHADS TO BOOT HER UP AND IT DOES NOT SHIP WIH DEPENDENCIES -----------------------------------------------
+
+This is the full setup (will go through it on YouTube video for beginners just enjoy the AI slop below that will half get you there):
 ## 🛠️ Quick Setup
 1. **Clone the repo.**
 2. **Create a `config.json`** in the root directory (refer to `config.example.json`).
@@ -40,3 +44,6 @@ Before running the client for the first time, you **must** update the following 
 
 MY YOUTUBE CHANNEL:  
 https://www.youtube.com/@davidgatward4395
+
+THE "FRESH" EXAMPLE PLUGIN: 
+https://github.com/FireStarter-Instigator/example-and-vanilla-plugins
