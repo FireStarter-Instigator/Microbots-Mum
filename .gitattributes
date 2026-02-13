@@ -1,0 +1,10 @@
+# Let me manually merge util package (including all nested folders)
+runelite-client/src/main/java/net/runelite/client/plugins/microbot/util/** merge
+runelite-client/src/main/java/net/runelite/client/plugins/microbot/util/**/* merge
+
+# Everything else — always prefer my version (local)
+runelite-client/src/main/java/net/runelite/client/plugins/** merge=keepMine
+runelite-client/src/test/java/net/runelite/client/plugins/** merge=keepMine
+.github/** merge=keepMine
+**/pom.xml merge=keepMine
+* merge=keepMine

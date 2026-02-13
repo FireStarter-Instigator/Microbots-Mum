@@ -1,0 +1,18 @@
+target
+nbactions.xml
+nb-configuration.xml
+/nbproject/
+project.properties
+*.iml
+.idea/
+.project
+.settings/
+.classpath
+.vscode
+.factorypath
+.DS_Store
+# Local Configuration
+config.json
+target_version.txt
+*.pyc
+__pycache__/
