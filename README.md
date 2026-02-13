@@ -1,6 +1,6 @@
 TO USE THIS PROJECT: 
 1. GO HERE: https://download-directory.github.io/
-2. Then paste in "MICROBOTS-MUM" and what this does ihe same as doing git clone. So then you just click open project instead of clone repository.  
+2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository.  
 
 This project comes with some plugins:
 1. An autolooter
@@ -47,3 +47,6 @@ https://www.youtube.com/@davidgatward4395
 
 THE "FRESH" EXAMPLE PLUGIN: 
 https://github.com/FireStarter-Instigator/example-and-vanilla-plugins
+
+THE OFFICIAL GITHUB LINK TO THE REPO (Just like Microbot's or Runelite's)
+https://github.com/FireStarter-Instigator/Microbots-Mum
