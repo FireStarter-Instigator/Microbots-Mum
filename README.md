@@ -1,6 +1,8 @@
 TO USE THIS PROJECT: 
 1. GO HERE: https://download-directory.github.io/
-2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository.  
+2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository.
+
+PLEASE USE apache-maven-3.9.11 (system-wide - refer to links at bottom of README-md)
 
 This project comes with some plugins:
 1. An autolooter
@@ -23,7 +25,7 @@ This is the full setup (will go through it on YouTube video for beginners just e
 3. **Define your paths** (Drive letters, Maven location, etc.) in the JSON file.
 4. **Run the scripts.** Your personal paths will be ignored by Git.
 
-This project contains a specialized bootstrapper designed to fetch, prune, and locally install the RuneLite source code. It ensures your environment stays synchronized with the latest stable upstream releases while stripping out unnecessary plugins to keep your build lean.
+This project contains a specialized bootstrapper designed to fetch, prune, and locally install the RuneLite source code. It ensures your environment stays synchronized with the latest stable upstream releases while stripping out unnecessary plugins to keep your build lean. Please install maven 11.9
 
 The Python script `bootstrap_runelite.py` automates the heavy lifting of environment setup. It handles everything from GitHub API version checks to Maven/Gradle local installation.
 
@@ -50,3 +52,7 @@ https://github.com/FireStarter-Instigator/example-and-vanilla-plugins
 
 THE OFFICIAL GITHUB LINK TO THE REPO (Just like Microbot's or Runelite's)
 https://github.com/FireStarter-Instigator/Microbots-Mum
+
+THIS WAS CREATING A HALLUCINATION OF THE AI BUT IT DEMONSTRATES THAT apache-maven-3.9.11 (maven 3.9.11 link to download https://maven.apache.org/docs/history.html) 
+https://github.com/FireStarter-Instigator/Microbots-Mum/commit/d96eff5b4f4eed96b2d30f8b4716fc3985789c37
+
