@@ -38,6 +38,8 @@ Before running the client for the first time, you **must** update the following 
 3. **Source Sanitization**: Rewrites `RuneLiteModule.java` on the fly to prevent compilation errors from deleted plugins.
 4. **Local Artifact Injection**: Builds the project and installs `runelite-api` and `runelite-client` into your local `.m2` repository under the version `LOCAL-GRADLE`.
 
+WILL NOT BUILD WITHOUT 4GB LIMIT GIVEN TO MAVEN TO BUILD "-Xmx4g"
+
 ### 💻 Usage
 1. Open `bootstrap_runelite.py`.
 2. Edit the `WORK_DIR` and `VERSION_FILE_PATH`.
