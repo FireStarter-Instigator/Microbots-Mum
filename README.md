@@ -1,6 +1,8 @@
-TO USE THIS PROJECT: 
+TO USE THIS PROJECT + CLONE IT LIKE YOU WOULD MICROBOT, JUST USING THE MICROBOT MUM'S DISCORD LINK.
+ALTERNATIVELY, DOWNLOAD THE PROJECT AS A ZIP BY PRESSING THE GREEN <CODE> BUTTON 
+OR:
 1. GO HERE: https://download-directory.github.io/
-2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository.
+2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository in IntelliJ. 
 
 PLEASE USE apache-maven-3.9.11 (system-wide, and when building make sure you make it 4gb capacity MAVEN_OPTS="-Xmx4g" - refer to links at bottom of README-md)
 
