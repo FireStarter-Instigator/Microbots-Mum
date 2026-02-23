@@ -1,6 +1,8 @@
-TO USE THIS PROJECT: 
+TO USE THIS PROJECT CLONE IT LIKE YOU WOULD MICROBOT, JUST USING THE MICROBOT MUM'S FIRESTARTER-INSTIGATOR GITHUB (.GIT) LINK RATHER THAN CHASMI'S MICROBOT'S GITHUB (.GIT) LINK.
+ALTERNATIVELY, DOWNLOAD THE PROJECT AS A ZIP BY PRESSING THE GREEN <<<<//CODE//>>>></CODE> BUTTON 
+OR:
 1. GO HERE: https://download-directory.github.io/
-2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository.
+2. Then paste in the official full directory URL (bottom of the README.md) and what this does is the same as doing git clone. So then you just click open project instead of clone repository in IntelliJ. 
 
 PLEASE USE apache-maven-3.9.11 (system-wide, and when building make sure you make it 4gb capacity MAVEN_OPTS="-Xmx4g" - refer to links at bottom of README-md)
 
@@ -28,7 +30,7 @@ This is the full setup (will go through it on YouTube video for beginners just e
 
 This project contains a specialized bootstrapper designed to fetch, prune, and locally install the RuneLite source code. It ensures your environment stays synchronized with the latest stable upstream releases while stripping out unnecessary plugins to keep your build lean. Please install maven 11.9
 
-The Python script `bootstrap_runelite.py` automates the heavy lifting of environment setup. It handles everything from GitHub API version checks to Maven/Gradle local installation.
+The Python script `runelite_bootstrap.py` automates the heavy lifting of environment setup. It handles everything from GitHub API version checks to Maven/Gradle local installation.
 
 Before running the client for the first time, you **must** update the following paths in the `config.json` in the root of the project (with the readME you're reading now).
 
@@ -42,14 +44,14 @@ This then means that the runelite-api and runelite-client is external to your ma
 However, there is an older version of the runelite-api that ships with the build. Simply Legacy api from pre-gradle. Will likely slowly fade from existence but it has cool modules like Cuboid. 
 
 ### 💻 Usage
-1. Open `bootstrap_runelite.py`.
+1. Open `runelite_bootstrap.py`.
 2. Edit the `WORK_DIR` and `VERSION_FILE_PATH`.
 3. Run the script:
    ```powershell
-   python bootstrap_runelite.py
+   python runelite_bootstrap.py
 
 Anyway, once you've set it all up, your m2 got your api, your project is cloned/opened in intelliJ, you can do a normal maven clean install to get your jar, or you can go to your Microbot root project folder and use the python script build_manager. 
-This will allow an automatic, background jar build, showing a gui of which branch you would like to build AND making a clone of your current entire setup. So works as a free backup and also updates the pom to the version the bootstrap_runelite.py created in a .txt file. 
+This will allow an automatic, background jar build, showing a gui of which branch you would like to build AND making a clone of your current entire setup. So works as a free backup and also updates the pom to the version the runelite_bootstrap.py created in a .txt file. 
 
 MY YOUTUBE CHANNEL:  
 https://www.youtube.com/@davidgatward4395

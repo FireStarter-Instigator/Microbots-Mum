@@ -1,0 +1,71 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install requests
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 11
+
+      - name: Run RuneLite Bootstrap
+        run: python runelite_bootstrap.py
+        env:
+          MAVEN_OPTS: "-Xmx4g"
+
+      - name: Get version from bootstrap
+        id: version
+        run: |
+          VERSION=$(cat ~/Automation_Empire/target_version.txt)
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Building version: $VERSION"
+
+      - name: Run Build Manager (headless, main branch only)
+        run: python build_manager.py --headless --branch main
+        env:
+          MAVEN_OPTS: "-Xmx4g"
+
+      - name: Find built JAR
+        id: find_jar
+        run: |
+          JAR_PATH=$(find ~/Automation_Empire/Builds -name "*.jar" -type f | head -n 1)
+          echo "JAR_PATH=$JAR_PATH" >> $GITHUB_OUTPUT
+          echo "Found JAR: $JAR_PATH"
+
+      - name: Create Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: ${{ steps.version.outputs.VERSION }}
+          prerelease: false
+          title: Release ${{ steps.version.outputs.VERSION }}
+          files: ${{ steps.find_jar.outputs.JAR_PATH }}
+
+      - name: Upload to Azure Blob (optional)
+        if: secrets.blobConnectionString != ''
+        uses: bacongobbler/azure-blob-storage-upload@main
+        with:
+          source_dir: ~/Automation_Empire/Builds
+          container_name: microbot
+          connection_string: ${{ secrets.blobConnectionString }}
+          extra_args: '--pattern *.jar --destination-path release'
+          overwrite: 'true'
